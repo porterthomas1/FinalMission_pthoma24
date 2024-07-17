@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Entertainer Details";
+    ViewData["Page Heading"] = "Entertainer Details";
+}
+
+<!-- Recieve the details for the entertainer -->
+@model Entertainer
+
+<table class="table table-bordered table-striped">
+
+    <thread class="font-weight-bold">
+        <tr>
+            <!-- "table row" - syntax for a table row -->
+            <td>Stage Name</td> <!-- "table domain" - syntax for a table column -->
+            <td>SSN</td>
+            <td>Street Address</td>
+            <td>City</td>
+            <td>State</td>
+            <td>Zip Code</td>
+            <td>Phone Number</td>
+            <td>Web Page</td>
+            <td>Email</td>
+            <td>Date Entered</td>
+        </tr>
+    </thread>
+
+    <tbody>
+        <tr>
+            <td>@Model.EntStageName</td>
+            <td>@Model.EntSSN</td>
+            <td>@Model.EntStreetAddress</td>
+            <td>@Model.EntCity</td>
+            <td>@Model.EntState</td>
+            <td>@Model.EntZipCode</td>
+            <td>@Model.EntPhoneNumber</td>
+            <td>@Model.EntWebPage</td>
+            <td>@Model.EntEMailAddress</td>
+            <td>@Model.DateEntered</td>
+
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-entertainerid="@Model.EntertainerID">Edit</a></td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-entertainerid="@Model.EntertainerID">Delete</a></td>
+        </tr>
+    </tbody>
+
+</table>

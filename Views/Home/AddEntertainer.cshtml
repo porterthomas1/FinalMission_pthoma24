@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Add Entertainer";
+    ViewData["Page Heading"] = "Add Entertainer";
+}
+
+@model FinalMission_pthoma24.Models.Entertainer
+
+<div class="container p-3 bg-light">
+    <div class="d-flex justify-content-center">
+        <form method="post">
+            <label asp-for="EntStageName">Stage Name:</label>
+            <input asp-for="EntStageName" /><br />
+
+            <label asp-for="EntSSN">EntSSN:</label>
+            <input asp-for="EntSSN" /><br />
+
+            <label asp-for="EntStreetAddress">Street Address:</label>
+            <input asp-for="EntStreetAddress" /><br />
+
+            <label asp-for="EntCity">City:</label>
+            <input asp-for="EntCity" /><br />
+
+            <label asp-for="EntState">State:</label>
+            <input asp-for="EntState" /><br />
+
+            <label asp-for="EntZipCode">Zip Code:</label>
+            <input asp-for="EntZipCode" /><br />
+
+            <label asp-for="EntPhoneNumber">Phone Number:</label>
+            <input asp-for="EntPhoneNumber" /><br />
+
+            <label asp-for="EntWebPage">Web Page:</label>
+            <input asp-for="EntWebPage" /><br />
+
+            <label asp-for="EntEMailAddress">EMail Address:</label>
+            <input asp-for="EntEMailAddress" /><br />
+
+            <label asp-for="DateEntered">Date Entered:</label>
+            <input asp-for="DateEntered" /><br />
+
+            <div class="d-flex justify-content-center"><button type="submit">Add Entertainer</button></div>
+
+            <div asp-validation-summary="All"></div>
+        </form>
+    </div>
+</div>

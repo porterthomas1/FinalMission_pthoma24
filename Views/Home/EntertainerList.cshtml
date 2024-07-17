@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Entertainers";
+    ViewData["Page Heading"] = "Entertainers";
+}
+
+<!-- Recieve the list of Entertainers -->
+@model List<Entertainer>
+
+<table class="table table-bordered table-striped">
+
+    <thread class="font-weight-bold">
+        <tr>
+            <!-- "table row" - syntax for a table row -->
+            <td>Stage Name</td> <!-- "table domain" - syntax for a table column -->
+        </tr>
+    </thread>
+
+    <tbody>
+        <!-- Reference the connected model in the header and iterate through each model element (Make sure to capitalize the "M" in "Model") -->
+        @foreach (var x in Model)
+        {
+            <!-- Populate table body with a row for each entry, having each column referencing its respective database column using Razor code -->
+            <tr>
+                <td>@x.EntStageName</td>
+
+                <td><a asp-controller="Home" asp-action="Details" asp-route-entertainerid="@x.EntertainerID">Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="container border-dark flex-column justify-content-center">
+    <div class="container p-1 mx-auto text-center"><a asp-controller="Home" asp-action="AddEntertainer">Add Entertainer</a></div>
+</div>
